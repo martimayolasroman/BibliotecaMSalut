@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca d'aplicacions de salud</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="banner">
+        <a href="index.html" class="game-card-link">
+        <img src="imatges/logo.png" alt="Logo" class="logo">
+        </a>
+        
+    </div>
+    <div class="image-banner">
+        <img src="imatges/bannerimage.jpg" alt="Descripción de la imagen">
+    </div>
+    <div class="container">
+        <div class="sidebar">
+             <!-- Botones para activar los filtros -->
+            <button class="filter-btn" onclick="toggleFilter('tematica')" data-target="tematica">Temática
+             <span class="arrow">&#9660;</span> <!-- Flecha hacia abajo --></button>
+            <div class="filter-section" id="tematica">
+                <ul>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox"  id="medication" name="tematica" value="medication">
+                            <label for="medication">Gestión de la medicación</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="womens_health" name="tematica" value="womens_health">
+                            <label for="womens_health">Salud de la mujer y embarazo</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="specific_diseases" name="tematica" value="specific_diseases">
+                            <label for="specific_diseases">Enfermedades específicas</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="nutrition" name="tematica" value="nutrition">
+                            <label for="nutrition">Nutrición y dieta</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="children" name="tematica" value="children">
+                            <label for="children">Infantes</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="serious_games" name="tematica" value="serious_games">
+                            <label for="serious_games">Serious Games (G4H)</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="health_professionals" name="tematica" value="health_professionals">
+                            <label for="health_professionals">Aplicaciones para profesionales sanitarios</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="general_health" name="tematica" value="general_health">
+                            <label for="general_health">Información de salud general</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <button class="filter-btn" onclick="toggleFilter('esquemas')" data-target="esquemas">Esquemas cromáticos <span class="arrow">&#9660;</span> <!-- Flecha hacia abajo -->
+          </button>
+            <div class="filter-section" id="esquemas">
+                <ul>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="un" name="esquemas" value="un">
+                            <label for="un">Esquema monocromático</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="dos" name="esquemas" value="dos">
+                            <label for="dos">Esquema monocromático con acento complementario</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="tres" name="esquemas"value="tres">
+                            <label for="tres">Esquema monocromático con acento</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="quatre" name="esquemas"value="quatre">
+                            <label for="quatre">Análogo</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="cinc" name="esquemas"value="cinc">
+                            <label for="cinc">Análogo con acento complementario</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="sis" name="esquemas"value="sis">
+                            <label for="sis">Análogo con acento</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="set" name="esquemas"value="set">
+                            <label for="set">Triádico</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="vuit" name="esquemas"value="vuit">
+                            <label for="vuit">Armonic</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="filter-btn" onclick="toggleFilter('numero_colores')" data-target="numero_colores">Número de colores <span class="arrow">&#9660;</span> <!-- Flecha hacia abajo -->
+          </button>
+            <div class="filter-section" id="numero_colores">
+                <ul>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="colors_3" name="numero_colores"value="colors_3">
+                            <label for="colors_3">3 colores</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="colors_5" name="numero_colores"value="colors_5">
+                            <label for="colors_5">5 colores</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="colors_6" name="numero_colores" value="colors_6">
+                            <label for="colors_6">6 colores</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="colors_10" name="numero_colores"value="colors_10">
+                            <label for="colors_10">10 colores</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="filter-btn" onclick="toggleFilter('elementos')" data-target="elementos">Elementos 2D y 3D <span class="arrow">&#9660;</span> <!-- Flecha hacia abajo -->
+          </button>
+            <div class="filter-section" id="elementos">
+                <ul>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="elements_2d" name="elementos" value="elements_2d">
+                            <label for="elements_2d">Elementos 2D</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="elements_3d" name="elementos" value="elements_3d">
+                            <label for="elements_3d">Elementos 3D</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <button class="filter-btn" onclick="toggleFilter('navegacion')" data-target="navegacion">Estilo de navegación <span class="arrow">&#9660;</span> <!-- Flecha hacia abajo -->
+          </button>
+            <div class="filter-section" id="navegacion">
+                <ul>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="tab_navigation" name="navegacion"value="tab_navigation">
+                            <label for="tab_navigation">Tab Navigation</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="card_navigation" name="navegacion"value="card_navigation">
+                            <label for="card_navigation">Card Navigation</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="map_navigation" name="navegacion"value="map_navigation">
+                            <label for="map_navigation">Map-based Navigation</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="drawer_navigation" name="navegacion"value="drawer_navigation">
+                            <label for="drawer_navigation">Drawer Navigation</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            
+        </div>
+        <div class="apps">
+            
+            <div id="appList">
+                <!-- Aquí se mostrarán las aplicaciones -->
+
+                <div class="card-container">
+                    <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                <a href="Medisafe.html" class="game-card-link"> 
+                    <div class="game-card" data-tematica="medication" data-esquemas="dos" data-numero_colores="colors_6" data-elementos="elements_2d" data-navegacion="tab_navigation">
+                        <img src="imatges/mediasafe.JPG" alt="Medisafe">
+                        <div class="card-info">
+                        <h3>Medisafe</h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Gestió de la medicació</p>
+                        </div>
+                        </div>
+                </a>
+                    <!-- Fin del bloque de tarjeta -->
+                    <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                    <a href="MedicamentoAccesible.html" class="game-card-link"> 
+                        <div class="game-card" data-tematica="medication" data-esquemas="dos" data-numero_colores="colors_6" data-elementos="elements_2d" data-navegacion="card_navigation">
+                        <img src="imatges/medicamentoaccesible.jpg" alt="Medicamento Accesible Plus">
+                        <div class="card-info">
+                        <h3>Medicamento Accesible Plus</h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Gestió de la medicació</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                    <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                    <a href="MyCalendar.html" class="game-card-link"> 
+                    <div class="game-card" data-tematica="womens_health" data-esquemas="quatre" data-numero_colores="colors_6" data-elementos="elements_2d" data-navegacion="tab_navigation">
+                        <img src="imatges/mycalendar.jpg" alt="My Calendar">
+                        <div class="card-info">
+                        <h3>My Calendar</h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Salut de la dona i embaràs</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                    <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                    <a href="Embarazo+.html" class="game-card-link"> 
+                    <div class="game-card" data-tematica="womens_health" data-esquemas="quatre" data-numero_colores="colors_6" data-elementos="elements_3d" data-navegacion="tab_navigation">
+                        <img src="imatges/embarazo+.jpg" alt="Embarazo +">
+                        <div class="card-info">
+                        <h3>Embarazo +</h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Salut de la dona i embaràs</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                    <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                    <a href="Laia.html" class="game-card-link"> 
+                    <div class="game-card" data-tematica="womens_health" data-esquemas="quatre" data-numero_colores="colors_6" data-elementos="elements_2d" data-navegacion="tab_navigation">
+                        <img src="imatges/laia.jpg" alt="Laia">
+                        <div class="card-info">
+                        <h3>Laia </h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Salut de la dona i embaràs</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                    <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                    <a href="DearMamma.html" class="game-card-link"> 
+                     <div class="game-card" data-tematica="womens_health" data-esquemas="monochromatic" data-numero_colores="colors_5" data-elementos="elements_2d" data-navegacion="tab_navigation">
+                        <img src="imatges/dearmama.jpg" alt="Dearmamma">
+                        <div class="card-info">
+                        <h3> Dearmamma </h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Salut de la dona i embaràs</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                    <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                    <a href="LactApp.html" class="game-card-link"> 
+                    <div class="game-card" data-tematica="womens_health" data-esquemas="dos" data-numero_colores="colors_6" data-elementos="elements_2d" data-navegacion="tab_navigation">
+                        <img src="imatges/lactapp.jpg" alt="LactApp">
+                        <div class="card-info">
+                        <h3>  LactApp </h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Salut de la dona i embaràs</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                    <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                    <a href="mysugar.html" class="game-card-link">
+                    <div class="game-card" data-tematica="specific_diseases" data-esquemas="tres" data-numero_colores="colors_6" data-elementos="elements_2d" data-navegacion="tab_navigation">
+                        <img src="imatges/mysugar.jpg" alt="mySugr">
+                        <div class="card-info">
+                        <h3>  mySugr </h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Diabetes</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                    <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                    <a href="BackFit.html" class="game-card-link">
+                    <div class="game-card" data-tematica="specific_diseases" data-esquemas="dos" data-numero_colores="colors_6" data-elementos="elements_2d" data-navegacion="card_navigation">
+                        <img src="imatges/backfit.jpg" alt="BackFit">
+                        <div class="card-info">
+                        <h3>  BackFit  </h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Dolor Lumbar Crònic</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                     <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                     <a href="Cleo.html" class="game-card-link">
+                    <div class="game-card" data-tematica="specific_diseases" data-esquemas="set" data-numero_colores="colors_6" data-elementos="elements_2d" data-navegacion="tab_navigation">
+                        <img src="imatges/cleo.jpg" alt=" Cleo, mi Esclerosis Múltiple">
+                        <div class="card-info">
+                        <h3>  Cleo, mi Esclerosis Múltiple  </h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Esclerosis Múltiple</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                    <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                    <a href="MindDiary.html" class="game-card-link">
+                    <div class="game-card" data-tematica="specific_diseases" data-esquemas="dos" data-numero_colores="colors_6" data-elementos="elements_2d" data-navegacion="tab_navigation">
+                        <img src="imatges/mindiary.jpg" alt="MindDiary: Diario de ánimo">
+                        <div class="card-info">
+                        <h3>  MindDiary: Diario de ánimo  </h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Salut mental</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                    <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                    <a href="MigraineBuddy.html" class="game-card-link">
+                    <div class="game-card" data-tematica="specific_diseases" data-esquemas="dos" data-numero_colores="colors_6" data-elementos="elements_2d" data-navegacion="tab_navigation">
+                        <img src="imatges/migrainebuddy.jpg" alt="Migraine Buddy">
+                        <div class="card-info">
+                        <h3>  Migraine Buddy  </h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Migranya</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                    <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                    <a href="CalorieCounter.html" class="game-card-link">
+                    <div class="game-card" data-tematica="nutrition" data-esquemas="tres" data-numero_colores="colors_6" data-elementos="elements_2d" data-navegacion="tab_navigation">
+                        <img src="imatges/calorie counter.jpg" alt="Calorie Counter">
+                        <div class="card-info">
+                        <h3>  Calorie Counter  </h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Nutrició i dieta</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                    <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                    <a href="MiFitnessPal.html" class="game-card-link">
+                    <div class="game-card" data-tematica="nutrition" data-esquemas="set" data-numero_colores="colors_6" data-elementos="elements_2d" data-navegacion="tab_navigation">
+                        <img src="imatges/myfitnesspal.jpg" alt="MyFitnessPal">
+                        <div class="card-info">
+                        <h3>  MyFitnessPal  </h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Nutrició i dieta</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                    <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                    <a href="Leeloo.html" class="game-card-link">
+                    <div class="game-card" data-tematica="children" data-esquemas="sis" data-numero_colores="colors_6" data-elementos="elements_2d" data-navegacion="card_navigation">
+                        <img src="imatges/leelooaac.jpg" alt="Leeloo AAC">
+                        <div class="card-info">
+                        <h3>   Leeloo AAC  </h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Infants</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                    <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                    <a href="Hippo.html" class="game-card-link">
+                    <div class="game-card" data-tematica="serious_games" data-esquemas="dos" data-numero_colores="colors_6" data-elementos="elements_2d" data-navegacion="card_navigation">
+                        <img src="imatges/hippo.jpg" alt="Oculista Hippo">
+                        <div class="card-info">
+                        <h3>   Oculista Hippo  </h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Serious_games (G4H)</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                    <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                    <a href="Yotmbnleo.html" class="game-card-link">
+                    <div class="game-card" data-tematica="serious_games" data-esquemas="set" data-numero_colores="colors_3" data-elementos="elements_2d" data-navegacion="card_navigation">
+                        <img src="imatges/yotambienleo.jpg" alt="Yo también leo">
+                        <div class="card-info">
+                        <h3>   Yo también leo  </h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Serious_games (G4H)</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                    <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                    <a href="Elevate.html" class="game-card-link">
+                    <div class="game-card" data-tematica="serious_games" data-esquemas="sis" data-numero_colores="colors_6" data-elementos="elements_2d" data-navegacion="tab_navigation">
+                        <img src="imatges/elevate.jpg" alt="Elevate - Juegos Mentales">
+                        <div class="card-info">
+                        <h3>  Elevate - Juegos Mentales  </h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Serious_games (G4H)</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                    <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                    <a href="Endeavor.html" class="game-card-link">
+                    <div class="game-card" data-tematica="serious_games" data-esquemas="quatre" data-numero_colores="colors_6" data-elementos="elements_3d" data-navegacion="card_navigation">
+                        <img src="imatges/endeavour.jpg" alt="EndeavorRx® - Kid">
+                        <div class="card-info">
+                        <h3>  EndeavorRx® - Kid  </h3>
+                        <p>Recepta mèdica, 99 dòlars</p>
+                        <p>Serious_games (G4H)</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                     <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                     <a href="eAnatomy.html" class="game-card-link">
+                     <div class="game-card" data-tematica="health_professionals" data-esquemas="quatre" data-numero_colores="colors_6" data-elementos="elements_3d" data-navegacion="card_navigation">
+                        <img src="imatges/eanatomy.jpg" alt="e-Anatomy">
+                        <div class="card-info">
+                        <h3>  e-Anatomy  </h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Aplicacions per a professionals sanitaris</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                     <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                     <a href="guiamensa.html" class="game-card-link">
+                     <div class="game-card" data-tematica="health_professionals" data-esquemas="quatre" data-numero_colores="colors_6" data-elementos="elements_2d" data-navegacion="card_navigation">
+                        <img src="imatges/guimensa.jpg" alt=" Guía Mensa">
+                        <div class="card-info">
+                        <h3>  Guía Mensa  </h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Aplicacions per a professionals sanitaris</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                     <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                     <a href="ReadBy.html" class="game-card-link">
+                     <div class="game-card" data-tematica="health_professionals" data-esquemas="quatre" data-numero_colores="colors_6" data-elementos="elements_2d" data-navegacion="tab_navigation">
+                        <img src="imatges/readby.jpg" alt="Read by QxMD">
+                        <div class="card-info">
+                        <h3>   Read by QxMD  </h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Aplicacions per a professionals sanitaris</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                     <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                     <a href="mdcalc.html" class="game-card-link">
+                     <div class="game-card" data-tematica="health_professionals" data-esquemas="quatre" data-numero_colores="colors_6" data-elementos="elements_2d" data-navegacion="tab_navigation">
+                        <img src="imatges/mdcalc.jpg" alt=" MDCalc Medical Calculator">
+                        <div class="card-info">
+                        <h3>   MDCalc Medical Calculator  </h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Aplicacions per a professionals sanitaris</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                     <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                     <a href="AnatomyLearning.html" class="game-card-link">
+                     <div class="game-card" data-tematica="health_professionals" data-esquemas="cinc" data-numero_colores="colors_6" data-elementos="elements_3d" data-navegacion="map_navigation">
+                        <img src="imatges/anatomylearning.jpg" alt="Anatomy Learning - Anatomía 3D">
+                        <div class="card-info">
+                        <h3>    Anatomy Learning - Anatomía 3D  </h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Aplicacions per a professionals sanitaris</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                     <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                     <a href="TouchSurgery.html" class="game-card-link">
+                     <div class="game-card" data-tematica="health_professionals" data-esquemas="un" data-numero_colores="colors_6" data-elementos="elements_3d" data-navegacion="tab_navigation">
+                        <img src="imatges/touchsurgery.jpg" alt="Touch Surgery: Surgical Videos">
+                        <div class="card-info">
+                        <h3>    Touch Surgery: Surgical Videos  </h3>
+                        <p>Gratuïta, ofereix compres dins de l’app</p>
+                        <p>Aplicacions per a professionals sanitaris</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                     <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                     <a href="Lamevasalut.html" class="game-card-link">
+                     <div class="game-card" data-tematica="general_health" data-esquemas="vuit" data-numero_colores="colors_10" data-elementos="elements_2d" data-navegacion="drawer_navigation">
+                        <img src="imatges/lamevasalut.jpg" alt="La meva Salut">
+                        <div class="card-info">
+                        <h3>    La meva Salut  </h3>
+                        <p>Gratuïta</p>
+                        <p>Aplicacions per a professionals sanitaris</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+                     <!-- Repetir este bloque para cada una de las 27 tarjetas -->
+                     <a href="PrimerosAuxilios.html" class="game-card-link">
+                     <div class="game-card" data-tematica="general_health" data-esquemas="dos" data-numero_colores="colors_6" data-elementos="elements_2d" data-navegacion="tab_navigation">
+                        <img src="imatges/primerosAuxilos.jpg" alt="Primeros Auxilios / Cruz Roja">
+                        <div class="card-info">
+                        <h3>    Primeros Auxilios / Cruz Roja  </h3>
+                        <p>Gratuïta</p>
+                        <p>Aplicacions per a professionals sanitaris</p>
+                        </div>
+                        </div>
+                    </a>
+                    <!-- Fin del bloque de tarjeta -->
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+  <!-- Aquí se mostrarán las aplicaciones -->
+
+  
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F7F9F9; /* Fondo gris muy claro */
+    color: #333; /* Texto en negro para contraste */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap; 
+    align-items: flex-start;  
+    width: 100%;  
+}
+
+
+.sidebar {
+    flex: 1;  
+    min-width: 300px;  
+    padding: 20px;  
+    box-sizing: border-box;  
+}
+
+.sidebar h3, .sidebar ul {
+    font-size: 16px;  
+}
+.sidebar ul li {
+    margin-bottom: 10px; 
+}
+
+.filter-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #2C3E50; /* Color azul oscuro para el botón */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 5px; /* Espacio entre botones */
+    transition: background-color 0.2s; /* Transición suave para hover */
+}
+
+.filter-btn:hover {
+    background-color: #34495E; /* Azul un poco más claro para hover */
+}
+
+.filter-section {
+    display: none;
+    padding-left: 10px;
+}
+
+.filter-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;  
+    margin: 5px 0;
+}
+
+.checkbox-container label {
+    margin-left: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.sidebar input[type="checkbox"] {
+    transform: scale(1.5);  
+    margin-right: 10px;  
+}
+
+
+input[type="checkbox"] {
+    appearance: none; 
+    width: 16px;  
+    height: 16px; 
+    background-color: white;  
+    border: 2px solid #BDC3C7; 
+    border-radius: 3px;  
+    margin-right: 10px;  
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0; 
+    display: inline-block;
+    vertical-align: middle;  
+    transition: background-color 0.3s ease, border-color 0.3s ease; 
+}
+
+input[type="checkbox"]:checked {
+    background-color: #2C3E50;  
+    border-color: #2C3E50;  
+}
+
+input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);  
+    width: 6px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.1s;  
+    box-sizing: border-box;
+}
+
+input[type="checkbox"]:not(:checked)::after {
+    opacity: 0;
+    transition: opacity 0.2s ease;  
+}
+
+input[type="checkbox"]:checked::after {
+    opacity: 1;  
+}
+
+.arrow {
+    display: inline-block;  /* Asegura que la flecha pueda transformarse */
+    transition: transform 0.3s ease-in-out; /* Suaviza la transición */
+}
+.arrow.active {
+    transform: rotate(180deg); /* Gira la flecha 180 grados */
+}
+
+.banner {
+    background-color: #2C3E50;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out; /* Asegura una transición suave */
+}
+
+
+.logo:hover {
+    transform: rotate(10deg); /* Rota el logo 10 grados al hacer hover */
+}
+
+
+
+.title {
+    margin: 0;
+}
+
+
+
+.image-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;  
+    background-color: #f0f0f0;
+}
+
+.image-banner img {
+    width: 100%;  
+    height: auto;  
+    display: block;  
+    margin: 0;  
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 20px;
+}
+
+
+
+.apps {
+    flex: 3;  
+    padding: 20px;  
+}
+
+/*.game-card {
+    flex: 0 0 21%; 
+    margin: 10px;  
+    height: auto;  
+    max-height: 300px;  
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}*/
+
+.game-card {
+    background-color: #ffffff;  
+    border: 1px solid #e0e0e0;  
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    padding: 10px;  
+    margin: 10px;  
+    flex: 0 0 21%; 
+    height: auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px; /* Cambia esto para ver diferentes efectos de redondeo */
+
+    
+    transition: transform 0.3s ease-in-out; /* Añade un efecto de transición */
+}
+
+
+.game-card img {
+    width: 100%; /* Asegura que la imagen cubra el ancho completo */
+    height: 500px; /* Establece un alto fijo para la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio asignado sin distorsionarse */
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 10px;  
+    width: 100%; 
+}
+ 
+/*.card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 10px;  Ajusta el padding para optimizar el espacio 
+    text-align: center; /* Centra el texto horizontalmente 
+    width: 100%; /* Utiliza todo el ancho de la tarjeta 
+}*/
+
+
+.game-card:hover {
+    transform: translateY(-5px); /* Elevación al pasar el ratón */
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2); /* Sombra más intensa al interactuar */
+}
+
+
+.card-info h3, .card-info p {
+    margin: 2px 0; 
+    text-align: center;  
+}
+
+.game-card-link {
+    text-decoration: none; /* Elimina cualquier subrayado en el enlace */
+    color: inherit; /* Hereda el color de texto de elementos padre */
+    display: block; /* Hace que el enlace ocupe todo el espacio de la tarjeta */
+}
+
+
+
+@media (max-width: 768px) {
+    .game-card {
+        flex: 0 0 100%;  
+    }
+
+    .game-card img {
+        max-height: 200px; /* Ajusta esto según el diseño específico para móviles */
+    }
+
+    .card-info {
+        height: auto; /* Permite expansión según el contenido */
+    }
+
+    .container {
+        flex-direction: column; 
+    }
+
+    .apps {
+        flex: none;  
+        width: 100%; 
+    }
+
+    .sidebar {
+        flex: none;  
+        width: 100%;  
+        padding: 10px; 
+    }
+
+    .sidebar input[type="checkbox"] {
+        transform: scale(1);  
+    }
+
+}
+@media (max-width: 1024px) {
+    .game-card {
+        flex: 0 0 46%; 
+    }
+}
+
+

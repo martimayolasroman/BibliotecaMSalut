@@ -1,0 +1,191 @@
+.content-wrapper {
+    display: flex;
+    align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
+    padding-left: 200px; /* Ajusta esto según el ancho de tu left-section */
+}
+
+.left-section {
+    font-family: 'Arial', sans-serif; /* Fuente sin serifa para el texto normal */
+    width: 15%;  
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 122px;
+    left: 0px;
+    height: calc(100% - 40px);
+    color: #333; /* Gris oscuro para el texto */
+    background-color: #F7F9F9; /* Fondo claro para contraste */
+    overflow-y: auto;
+}
+
+.left-section h2, .left-section h3 {
+    font-family: 'Georgia', serif; /* Fuente con serifa para los títulos */
+    color: #2C3E50; /* Color oscuro para buen contraste */
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-size: 24px; /* Tamaño más grande para títulos */
+}
+
+.left-section img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+}
+
+.banner {
+    
+        width: 100%; /* Ocupa el ancho completo de la página */
+        background-color: #2C3E50; /* Tu color de fondo */
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Centra el contenido si es necesario */
+        padding: 20px 0; /* Ajusta el padding vertical según necesites */
+        box-sizing: border-box; /* Incluye el padding en la medida del width/height */
+    
+}
+
+.banner a img.banner-image {
+    width: 40px; /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+    margin-left: 50px; /* Espacio entre imágenes o elementos del banner */
+    transition: transform 0.3s ease-in-out; /* Asegura una transición suave */
+}
+.banner a img.banner-image:hover {
+    transform: rotate(10deg); /* Rota el logo 10 grados al hacer hover */
+}
+
+.banner h1 {
+    margin: 0; /* Elimina márgenes por defecto para ajustes más finos */
+    font-size: 70px; /* Tamaño grande para visibilidad */
+}
+
+h2 {
+    color: #2C3E50; /* Color oscuro similar al del banner */
+    font-size: 20px; /* Visibilidad clara */
+}
+
+img {
+    max-width: 100%; /* Asegura que las imágenes no se desborden de su contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+
+.logo {
+    width: 50px; /* Ajusta según el tamaño de tu logo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 20px; /* Espacio entre el logo y el texto o elementos próximos */
+    transition: transform 0.3s ease-in-out; /* Asegura una transición suave */
+}
+
+
+.logo:hover {
+    transform: rotate(10deg); /* Rota el logo 10 grados al hacer hover */
+}
+
+body {
+    background-color: #F7F9F9; /* Un fondo claro */
+    color: #333; /* Texto en gris oscuro para contraste */
+    font-family: Arial, sans-serif; /* Tipografía limpia y moderna */
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Asegura que ocupa todo el ancho */
+    height: 100%; /* Asegura que ocupa todo el alto (opcional dependiendo de tu diseño) */
+}
+
+.apps {
+    flex: 3;  
+    padding: 20px;  
+}
+
+.cards-container {
+    flex-grow: 1; /* Ocupa todo el espacio disponible a la derecha */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    padding: 20px;
+    padding-left: 500px;
+    padding-top: 100px;
+    justify-content: flex-start; /* Alinea las tarjetas al inicio (izquierda) */
+
+}
+
+.card {
+    background-color: #fff;  /* Fondo blanco para las tarjetas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* Sombra ligera para resaltar las tarjetas */
+    cursor: pointer;  /* Indica que la tarjeta es clicable */
+    width: calc(25% - 20px); /* Ancho para 4 tarjetas por fila, ajustando el gap */
+    max-width: 300px; /* Máximo ancho de cada tarjeta */
+    border-radius: 15px; /* Cambia esto para ver diferentes efectos de redondeo */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobrepase */
+}
+
+.card img {
+    width: 100%;  /* Ajusta la imagen al contenedor */
+    height: 500px;  /* Mantiene la proporción */
+    object-fit: cover; /* Cubre el área del contenedor sin perder la proporción */
+    transition: transform 0.3s ease;  /* Suaviza la transformación */
+}
+
+.card:hover img {
+    transform: scale(1.05);  /* Aumenta ligeramente la imagen al pasar el ratón */
+}
+
+.card h3 {
+    text-align: center;  /* Centra el subtítulo */
+    padding: 10px;  /* Espacio alrededor del texto */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.store-link {
+    text-decoration: none; /* Elimina cualquier subrayado en el enlace */
+    color: inherit; /* Hereda el color de texto de elementos padre */
+    display: block; /* Hace que el enlace ocupe todo el espacio de la tarjeta */
+}
+
+@media (max-width: 768px) {
+   
+        .content-wrapper {
+            padding-left: 0;
+        }
+    
+        .left-section {
+            width: 100%; /* Asume todo el ancho en dispositivos móviles */
+            position: relative; /* Hace que vuelva al flujo normal */
+            height: auto;
+        }
+    
+        .cards-container {
+            width: 100%;
+        }
+}
