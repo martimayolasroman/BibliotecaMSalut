@@ -36,6 +36,7 @@ document.querySelectorAll('filter-btn').forEach(button => {
 function filterApps() {
     const filters = document.querySelectorAll('.checkbox-container input[type="checkbox"]:checked');
     const cards = document.querySelectorAll('.game-card');
+    let visibleCards = 0;
 
     cards.forEach(card => {
         let isVisible = Array.from(filters).every(filter => {
@@ -44,6 +45,20 @@ function filterApps() {
             const attribute = card.getAttribute(`data-${filterType}`);
             return attribute && attribute.includes(filterValue);
         });
-        card.style.display = isVisible ? 'block' : 'none';
+        if (isVisible) {
+            card.style.display = 'block';
+            visibleCards++;
+        } else {
+            card.style.display = 'none';
+        }
     });
+
+    // Comprobar si hay tarjetas visibles
+    const noResultsMessage = document.getElementById('noResultsMessage');
+    if (visibleCards > 0) {
+        noResultsMessage.style.display = 'none';
+    } else {
+        noResultsMessage.style.display = 'block';
+    }
+
 }
