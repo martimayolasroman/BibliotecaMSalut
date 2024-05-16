@@ -1,7 +1,7 @@
 function toggleFilter(filterName) {
-    var filterSection = document.getElementById(filterName);
-    var arrow = document.querySelector(`button[data-target="${filterName}"] .arrow`);
-    // Cambia solo el estado de la sección de filtro específica que fue clickeada
+    var filterSection = document.getElementById(filterName); // Filtre que es vol desplegar o plegar
+    var arrow = document.querySelector(`button[data-target="${filterName}"] .arrow`); // fletxa del filtre clicat
+    // Canvia l'estat del filtre que ha sigut clicat
     if (filterSection.style.display === "block") {
         filterSection.style.display = "none";
         arrow.classList.remove('active');
@@ -9,8 +9,6 @@ function toggleFilter(filterName) {
         filterSection.style.display = "block";
         arrow.classList.add('active');
     }
-
-
 
 }
 
